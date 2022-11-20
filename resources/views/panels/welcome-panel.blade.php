@@ -29,7 +29,8 @@
         <h2 class="lead">
             {{ trans('auth.loggedIn') }}
         </h2>
-        <p>
+
+<!--        <p>
             <em>Thank you</em> for checking this project out. <strong>Please remember to star it!</strong>
         </p>
         <p>
@@ -42,7 +43,24 @@
             <small>
                 Users registered via Social providers are by default activated.
             </small>
-        </p>
+        </p>-->
+        <div class="container">
+            <div class="input-group mb-3">
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="inputGroupFile02">
+                    <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
+                </div>
+                <div class="input-group-append">
+                    <span class="input-group-text" id="">Upload</span>
+                </div>
+            </div>
+
+        </div>
+
+        <form action="upload.php" method="POST" enctype="multipart/form-data">
+            <input type="submit" value="Wyślij pliki"/>
+            <input type="file" class="custom-file-input"  name="image[]" multiple="">
+        </form>
 
         <hr>
 
