@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use App\Models\Upload;
 
 class FileController extends Controller
 {
@@ -19,11 +21,11 @@ class FileController extends Controller
             'overview' => $request->get('overview'),
             'price' => $request->get('price')
         ]);
-
         return back()->with('message', 'Your file is submitted Successfully');
     }
     public function upload(Request $request)
     {
+        var_dump($request); die();
         $uploadedFile = $request->file('file');
         $filename = time().$uploadedFile->getClientOriginalName();
 
@@ -33,7 +35,7 @@ class FileController extends Controller
             $filename
         );
 
-        $upload = new Upload;
+        $upload = new upload;
         $upload->filename = $filename;
 
         $upload->user()->associate(auth()->user());

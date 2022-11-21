@@ -16,9 +16,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Homepage Route
-Route::post('file/upload', 'FileController@store')->name('file.upload');
-Route::post('upload', 'FileController@upload')->name('upload');
-
 Route::group(['middleware' => ['web', 'checkblocked']], function () {
     Route::get('/', 'App\Http\Controllers\WelcomeController@welcome')->name('welcome');
     Route::get('/terms', 'App\Http\Controllers\TermsController@terms')->name('terms');
@@ -26,6 +23,11 @@ Route::group(['middleware' => ['web', 'checkblocked']], function () {
 
 // Authentication Routes
 Auth::routes();
+//Route::post('file/upload', 'App\Http\Controllers\FileController@store')->name('file.upload');
+//Route::post('upload', 'App\Http\Controllers\FileController@upload')->name('upload');
+
+Route::post('file/upload', 'App\Http\Controllers\FileController@upload')->name('file.upload');
+Route::post('upload', 'App\Http\Controllers\FileController@store')->name('upload');
 
 // Public Routes
 Route::group(['middleware' => ['web', 'activity', 'checkblocked']], function () {

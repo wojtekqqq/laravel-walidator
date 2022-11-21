@@ -15,7 +15,7 @@
 // Font Awesome
 @import '~font-awesome/scss/font-awesome';
 
-// Dropzone
+//// Dropzone
 @import "~dropzone/dist/basic";
 @import "~dropzone/dist/dropzone";
 
@@ -41,17 +41,10 @@
 
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
-
-// Variables
-@import 'variables';
-
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
-
 // Dropzone
 @import '~dropzone/dist/min/dropzone.min.css';
 
 .dropzone {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     min-height: auto;
 }
