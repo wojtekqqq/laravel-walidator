@@ -24,10 +24,13 @@ Route::group(['middleware' => ['web', 'checkblocked']], function () {
 // Authentication Routes
 Auth::routes();
 //Route::post('file/upload', 'App\Http\Controllers\FileController@store')->name('file.upload');
-//Route::post('upload', 'App\Http\Controllers\FileController@upload')->name('upload');
+Route::post('upload', 'App\Http\Controllers\FileController@upload')->name('upload');
+Route::get('upload', 'App\Http\Controllers\FileController@index')->name('index');
+//Route::get('/upload', 'UploadController@index');
+//Route::post('/upload', 'UploadController@store');
 
-Route::post('file/upload', 'App\Http\Controllers\FileController@upload')->name('file.upload');
-Route::post('upload', 'App\Http\Controllers\FileController@store')->name('upload');
+//Route::post('file/upload', 'App\Http\Controllers\FileController@upload')->name('file.upload');
+//Route::post('upload', 'App\Http\Controllers\FileController@store')->name('upload');
 
 // Public Routes
 Route::group(['middleware' => ['web', 'activity', 'checkblocked']], function () {
