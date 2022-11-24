@@ -10,9 +10,11 @@
     "require": {
         "php": "^7.3|^8.0",
         "ext-intl": "*",
+        "ext-libxml": "*",
         "ext-zip": "*",
         "creativeorange/gravatar": "^1.0",
         "doctrine/dbal": "^2.10",
+        "dompdf/dompdf": "^2.0",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^2.0",
         "google/recaptcha": "^1.2",
@@ -42,8 +44,7 @@
         "socialiteproviders/instagram": "^3.0",
         "socialiteproviders/linkedin": "^3.1",
         "socialiteproviders/twitch": "^5.1",
-        "socialiteproviders/youtube": "^3.0",
-        "ext-libxml": "*"
+        "socialiteproviders/youtube": "^3.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.2",
