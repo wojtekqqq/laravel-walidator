@@ -142,6 +142,7 @@ class FileController extends Controller
                         $reportError = file_get_contents($reportProd);
                         $reportError = str_replace('green','red', $reportError);
                         file_put_contents($reportProd, $reportError);
+//                        echo 'jedna petla';/
 
                     } else {
                         $error_value = 'Nie stwierdzono błędów';
@@ -158,9 +159,12 @@ class FileController extends Controller
             }
 
         }
-
+        $today = date("Y-m-d H:i:s");
         $reportEnd = file_get_contents(public_path('report_end.html'));
           file_put_contents($reportProd, $reportEnd, FILE_APPEND);
+        $reportEnd = file_get_contents($reportProd);
+        $reportEnd = str_replace('DATA_CZAS',$today, $reportEnd);
+        file_put_contents($reportProd, $reportEnd);
         $reportEnd = file_get_contents($reportProd);
 
 // instantiate and use the dompdf class
@@ -168,7 +172,7 @@ class FileController extends Controller
         $dompdf->loadHtml($reportEnd);
 
 // (Optional) Setup the paper size and orientation
-        $dompdf->setPaper('A4', 'landscape');
+        $dompdf->setPaper('A4', 'portrait');
 
 // Render the HTML as PDF
         $dompdf->render();

@@ -59,13 +59,14 @@
                     </div>
                 @endif
                 <div class="card">
-                    <div class="card-header">File Upload</div>
+                    <div class="card-header">Prześlij pakiet do walidacji</div>
                     <div class="card-body">
 
                         <form method="POST" action="{{ route('upload') }}" aria-label="{{ __('Upload') }}"
                               enctype="multipart/form-data">
                             {{ csrf_field() }}
-                            <input type="file" accept=".zip, .xml" name="file">
+{{--                            <input type="file" accept=".zip, .xml" name="file">--}}
+                            <input type="file" accept=".zip" name="file">
                             <button type="submit" class="btn btn-primary">
                                 {{ __('Upload') }}
                             </button>
