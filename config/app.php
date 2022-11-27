@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Walidator'),
+    'name' => env('APP_NAME', 'Walidator BDOT10k'),
 
     /*
     |--------------------------------------------------------------------------
