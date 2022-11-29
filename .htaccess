@@ -4,3 +4,9 @@ php_value memory_limit 3000M
 php_value max_execution_time 0
 php_value max_input_time -1
 php_value display_errors On
+
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteCond %{REQUEST_URI} ^(.*)
+    RewriteRule ^(.*)$ /public/$1 [NC,L,QSA]
+</IfModule>
