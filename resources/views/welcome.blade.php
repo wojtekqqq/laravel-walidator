@@ -414,30 +414,31 @@
         @if (Route::has('login'))
             <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                 @auth
-                    <a href="{{ url('/home') }}" class="text-sm text-gray-500 underline">Home</a>
+                    <a href="{{ url('/home') }}" class="text-sm text-gray-500 underline">Start</a>
                 @else
-                    <a href="{{ route('login') }}" class="text-sm text-gray-500 underline">Login</a>
+                    <a href="{{ route('login') }}" class="text-sm text-gray-500 underline">Zaloguj</a>
 
                     @if (Route::has('register'))
-                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-500 underline">Register</a>
+                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-500 underline">Zarejestruj</a>
                     @endif
                 @endif
-                <a href="{{ url('/terms') }}" class="text-sm text-gray-500 underline ml-4">Terms</a>
+                <a href="{{ url('/terms') }}" class="text-sm text-gray-500 underline ml-4">Warunki</a>
             </div>
         @endif
         <div>
-            <H1>
-                <p class="col-lg-12">
+            <h4>
+                <p class="col-lg-12 h4">
                     <b>Witam w serwisie Walidator !!!</b>
                 </p>
-            </H1>
-            <div class="col-12 text-left h4">
-                <p class="text-larger">
+            </h4>
+            <br>
+            <div class="col-12 text-left">
+                <p class="h5">
                     Serwis umożliwia walidację danych BDOT10k w formacie przykazywanym do Centralnego Repozytorium
                     GUGIK.<br>
                     Po przeprowadzeniu walidacji otrzymamy raport w formacie pdf z informacją o wynikach walidacji.
                 </p>
-                <p class="text-larger">
+                <p class="h5">
                     Funkcja walidacji dostępna jest dla zalogowanych użytkownik, należy założyć darmowe konto.
                 </p>
             </div>
@@ -447,7 +448,7 @@
         <section class="col-1">
 
         </section>
-        <section class="col-5 text-center text-larger h4">
+        <section class="col-5 text-center text-larger h5">
             <h4 class="h-4">
                 <p class="text-l">
                     <b>Czym jest BDOT10k?</b>
@@ -458,12 +459,12 @@
             podstawową charakterystyką opisową.
         </section>
         <section class="col-5">
-            <h5 class="h-5">
-                <p class="text-center">
-                    Do czego służy walidacja wyżej opisanym narzędziem?
+            <h4 class="h4">
+                <p class="text-center h4">
+                    <b>Do czego służy walidacja wyżej opisanym narzędziem?</b><br>
                 </p>
-            </h5>
-            <ul class="-list">
+            </h4>
+            <ul class="-list h5">
                 <li>Sprawdzaniu składni XML</li>
                 <li>Ładowaniu adresów URL XML w celu sprawdzenia ich poprawności</li>
                 <li>Otrzymaniu dokładnych komunikatów o błędach</li>

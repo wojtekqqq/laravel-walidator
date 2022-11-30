@@ -68,7 +68,8 @@
 {{--                            <input type="file" accept=".zip, .xml" name="file">--}}
                             <input type="file" accept=".zip" name="file">
                             <button type="submit" class="btn btn-primary">
-                                {{ __('Upload') }}
+{{--                                {{ __('Upload') }}--}}
+                                Prześlij i waliduj
                             </button>
                         </form>
 
