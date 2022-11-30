@@ -150,7 +150,7 @@ class FileController extends Controller
 //                        die();
                     }
                     $reportError = file_get_contents($reportProd);
-                    $reportError = str_replace('STATUS_RAPORTU','Negatywny', $reportError);
+                    $reportError = str_replace('STATUS_RAPORTU','Pozytywny', $reportError);
                     file_put_contents($reportProd, $reportError,);
 
                 } catch (\InvalidArgumentException $e){

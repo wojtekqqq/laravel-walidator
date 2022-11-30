@@ -9,12 +9,14 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}" defer></script>
+{{--        <script src="{{ asset('js/app.js') }}" defer></script>--}}
+
+{{--        <!-- Styles -->--}}
+{{--        <link href="{{ asset('css/app.css') }}" rel="stylesheet">--}}
 
         <!-- Styles -->
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
-        <!-- Styles -->
+        <script src="css/app.css"></script>
+        <script src="js/app.js"></script>
         <style>
             /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
             html {
