@@ -15,8 +15,8 @@
 {{--        <link href="{{ asset('css/app.css') }}" rel="stylesheet">--}}
 
         <!-- Styles -->
-        <script src="css/app.css"></script>
-        <script src="js/app.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
         <style>
             /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
             html {
@@ -402,6 +402,8 @@
             #world {
                 background-image: url('images/europe.png') !important;
                 background-position: center;
+                background-size: cover;
+                /*background-repeat: no-repeat;*/
             }
         </style>
     </head>
@@ -426,10 +428,10 @@
         <div>
             <H1>
                 <p class="col-lg-12">
-                    Witam w serwisie Walidator !!!
+                    <b>Witam w serwisie Walidator !!!</b>
                 </p>
             </H1>
-            <div class="col-12 text-left">
+            <div class="col-12 text-left h4">
                 <p class="text-larger">
                     Serwis umożliwia walidację danych BDOT10k w formacie przykazywanym do Centralnego Repozytorium
                     GUGIK.<br>
@@ -442,12 +444,15 @@
         </div>
     </div>
     <div class="row">
-        <section class="col-5 text-center">
-            <h5 class="h-5">
-                <p>
-                    Czym jest BDOT10k?
+        <section class="col-1">
+
+        </section>
+        <section class="col-5 text-center text-larger h4">
+            <h4 class="h-4">
+                <p class="text-l">
+                    <b>Czym jest BDOT10k?</b>
                 </p>
-            </h5>
+            </h4>
             Baza Danych Obiektów Topograficznych (BDOT10k) to wektorowa baza danych
             zawierająca lokalizację przestrzenną obiektów topograficznych wraz z ich
             podstawową charakterystyką opisową.
