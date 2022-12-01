@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\URL;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -18,7 +19,7 @@ class AppServiceProvider extends ServiceProvider
         //Paginator::useBootstrapThree();
         Paginator::useBootstrap();
         Schema::defaultStringLength(191);
-        if (env('APP_ENV') === 'local') {
+        if (env('APP_ENV') !== 'local') {
             URL::forceScheme('https');
         }
     }
