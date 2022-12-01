@@ -400,19 +400,26 @@
                 font-family: 'Nunito';
             }
             #world {
-                /*background-image: url('images/europe.svg') !important;*/
-                background-image: url('images/europe.png') !important;
+                /*background-image: url('images/europe.png') !important;*/
+                background-image: url('images/europe.svg')  !important;
                 background-position: center;
-                background-size: cover;
-                /*background-repeat: no-repeat;*/
+                /*background-size: cover;*/
+                /*background: rgba(255, 252, 252, 0.05);*/
+                background-repeat: no-repeat;
                 /*opacity: 0.3;*/
 
             }
+            #tlo{
+                background: rgba(211, 207, 146, 0.05);
+            }
+            /*.filter-green{*/
+            /*    filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);*/
+            /*}*/
         </style>
     </head>
 
-    <body>
-    <div
+    <body id="world">
+    <div id="tlo"
         class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
         @if (Route::has('login'))
             <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
