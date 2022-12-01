@@ -400,15 +400,18 @@
                 font-family: 'Nunito';
             }
             #world {
+                /*background-image: url('images/europe.svg') !important;*/
                 background-image: url('images/europe.png') !important;
                 background-position: center;
                 background-size: cover;
                 /*background-repeat: no-repeat;*/
+                /*opacity: 0.3;*/
+
             }
         </style>
     </head>
 
-    <body id=world>
+    <body>
     <div
         class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
         @if (Route::has('login'))
