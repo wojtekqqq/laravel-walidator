@@ -407,10 +407,15 @@
                 /*background: rgba(255, 252, 252, 0.05);*/
                 background-repeat: no-repeat;
                 /*opacity: 0.3;*/
+                background-size: 80% auto;
 
             }
             #tlo{
-                background: rgba(211, 207, 146, 0.05);
+                /*background: rgba(211, 207, 146, 0.05);*/
+                /*text-shadow: 4px 4px 33px rgba(66, 68, 90, 1);*/
+                /*text-shadow: 0px 0px 26px rgba(0, 224, 153, 1);*/
+                text-shadow: 0px 0px 19px rgba(82, 168, 243, 1);
+                /*text-shadow: 0px 0px 34px rgba(253, 253, 253, 1);*/
             }
             /*.filter-green{*/
             /*    filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);*/
@@ -419,7 +424,7 @@
     </head>
 
     <body id="world">
-    <div id="tlo"
+    <div
         class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
         @if (Route::has('login'))
             <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
@@ -437,12 +442,12 @@
         @endif
         <div>
             <h4>
-                <p class="col-lg-12 h4">
+                <p class="col-lg-12 h4" id="tlo">
                     <b>Witam w serwisie Walidator !!!</b>
                 </p>
             </h4>
             <br>
-            <div class="col-12 text-left">
+            <div class="col-12 text-left" id="tlo">
                 <p class="h5">
                     Serwis umożliwia walidację danych BDOT10k w formacie przykazywanym do Centralnego Repozytorium
                     GUGIK.<br>
@@ -458,7 +463,7 @@
         <section class="col-1">
 
         </section>
-        <section class="col-5 text-center text-larger h5">
+        <section class="col-5 text-center text-larger h5" id="tlo">
             <h4 class="h-4">
                 <p class="text-l">
                     <b>Czym jest BDOT10k?</b>
@@ -468,9 +473,9 @@
             zawierająca lokalizację przestrzenną obiektów topograficznych wraz z ich
             podstawową charakterystyką opisową.
         </section>
-        <section class="col-5">
+        <section class="col-5" id = tlo>
             <h4 class="h4">
-                <p class="text-center h4">
+                <p class="text-center h4" >
                     <b>Do czego służy walidacja wyżej opisanym narzędziem?</b><br>
                 </p>
             </h4>
